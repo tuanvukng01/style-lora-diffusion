@@ -19,7 +19,7 @@ We evaluate performance using **CLIPScore**, and **LPIPS** across several artist
 [//]: # (| Ours &#40;LoRA&#41;   | XX.XX   | 0.XXX   | 0.XXX   |)
 
 <div align="center">
-  <img src="assets/benchmark_combined_table.png" width="80%">
+  <img src="assets/benchmark_combined_table.png" width="100%">
 </div>
 
 
