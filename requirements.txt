@@ -1,0 +1,11 @@
+torch
+transformers
+diffusers
+peft
+accelerate
+Pillow
+PyYAML
+matplotlib
+numpy
+torchmetrics
+open-clip-torch

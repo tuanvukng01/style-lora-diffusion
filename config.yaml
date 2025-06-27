@@ -1,0 +1,55 @@
+# Configuration for training and evaluation
+experiment:
+  name: "multi_style_diffusion"
+  output_dir: "./models/lora_weights"
+  logging_dir: "./outputs/logs"
+
+data:
+  base_dir: "./data"
+  styles:
+    - Impressionism
+    - Realism
+    - Baroque
+    - Post_Impressionism
+    - Romanticism
+    - Art_Nouveau
+    - Northern_Renaissance
+    - Symbolism
+    - Naive_Art_Primitivism
+    - Expressionism
+    - Cubism
+    - Fauvism
+    - Abstract_Expressionism
+    - Pointillism
+    - Early_Renaissance
+    - Color_Field_Painting
+    - Ukiyo_e
+    - Rococo
+    - High_Renaissance
+    - Mannerism_Late_Renaissance
+    - Pop_Art
+    - Minimalism
+  image_size: 512
+  batch_size: 4
+
+model:
+  base_model: "stabilityai/stable-diffusion-2-1-base"
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+
+training:
+  epochs: 5
+  lr: 1e-4
+  logging_steps: 100
+  save_steps: 500
+
+generation:
+  num_inference_steps: 50
+  guidance_scale: 7.5
+  lora_scale: 0.75
+  seed: 42
+
+evaluation:
+  clip_model: "openai/clip-vit-base-patch32"
+  lpips_network: "alex"
